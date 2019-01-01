@@ -1,0 +1,2 @@
+*** Variables ***
+${FIRST VARIABLE}   alskdjalsdkj
