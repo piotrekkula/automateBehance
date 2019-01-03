@@ -23,7 +23,14 @@ ${PROJECT CLOSE BUTTON}                 //div[@class='js-close-dialog']/*[contai
 ${FEAT PROJECT COVERS}                  //a[contains(@class,'rf-project-cover__title')]
 
 # Careers page locators
+${CAREERS KEYWORD INPUT FIELD}          //input[contains(@name,'search')]
+${CAREERS JOB OFFER}                    //div[contains(@class,'job-title')]/a
+${JOB OFFER TITLE}                      //span[contains(@class,'job-title')]
+${JOB OFFER COMPANY}                    //div[contains(@class,'company-name')]
+${JOB OFFER LOCATION}                   //div/h2[contains(@class,'job-location')]
+${JOB OFFER DETAILS}                    //div[contains(@class,'job-description')]
+${CAREERS LOADING RESULTS INDICATOR}    //div[contains(@class,'be-spinner')]
 
 # Search page locators
 ${SEARCH BEHANCE INPUT FIELD}           //input[@name='search']
-${LOADING SEARCH RESULTS INDICATOR}     //div[contains(@class,'loading-spinner')]
+${SEARCH LOADING RESULTS INDICATOR}     //div[contains(@class,'loading-spinner')]

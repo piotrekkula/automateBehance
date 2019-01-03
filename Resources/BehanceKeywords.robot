@@ -35,7 +35,7 @@ Go To Search Page
 
 # Project specific keywords
 Choose Random Project
-    ${random int}   Evaluate    random.randint(0,10)    modules=random
+    ${random int}   Evaluate    random.randint(1,10)    modules=random
     Click Element       (${FEAT PROJECT COVERS})[${random int}]   
 
 Choose Specific Project
@@ -49,6 +49,7 @@ Close Project Details
 
 View Details Of Project
     Wait Until Page Contains Element    ${PROJECT CONTENT COMMENTS SECTION}
+    Wait Until Page Contains Element    ${PROJECT CONTENT PROJECT TITLE}
     Page Should Contain Element         ${PROJECT CONTENT PROJECT TITLE}
     Capture Page Screenshot
     Scroll Element Into View            ${PROJECT CONTENT COMMENTS SECTION}
@@ -57,12 +58,34 @@ View Details Of Project
 # Featured page keywords
 
 # Careers page keywords
+Search Keywords
+    [Documentation]     Search keyword and press enter to show results
+    [Arguments]     ${searchkeyword}
+    Input Text      ${CAREERS KEYWORD INPUT FIELD}       ${searchkeyword}
+    Press Key       ${CAREERS KEYWORD INPUT FIELD}       \\13
+    Wait Until Element Is Not Visible    ${CAREERS LOADING RESULTS INDICATOR}
+
+Choose Random Job Offer
+    ${count offers}     Get Element Count   ${CAREERS JOB OFFER}
+    ${random int}       Evaluate            random.randint(1,${count offers})    modules=random
+
+    # Boundary values coverage
+    Run Keyword If  ${random int} > 0 and ${random int} < ${count offers}       Scroll Element Into View        (${CAREERS JOB OFFER})[${random int}+1]
+    Run Keyword If  ${random int} == ${count offers}                            Scroll Element Into View        (${CAREERS JOB OFFER})[${random int}]
+
+    Capture Page Screenshot
+    Click Link          (${CAREERS JOB OFFER})[${random int}]
+    
+View Job Offer Details
+    Wait Until Page Contains Element    ${JOB OFFER COMPANY}
+    Page Should Contain Element         ${JOB OFFER TITLE}
+    Page Should Contain Element         ${JOB OFFER LOCATION}
+    Page Should Contain Element         ${JOB OFFER DETAILS}
+    Capture Page Screenshot
 
 # Search page keywords
 Search Behance
     [Arguments]     ${searchkeyword}
     Input Text      ${SEARCH BEHANCE INPUT FIELD}       ${searchkeyword}
     Press Key       ${SEARCH BEHANCE INPUT FIELD}       \\13
-    Wait Until Element Is Not Visible    ${LOADING SEARCH RESULTS INDICATOR}
-
-
+    Wait Until Element Is Not Visible    ${SEARCH LOADING RESULTS INDICATOR}

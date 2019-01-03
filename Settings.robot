@@ -6,7 +6,7 @@ Library             SeleniumLibrary         screenshot_root_directory=${OUTPUT D
 Library             OperatingSystem
 
 *** Variables ***
-${BROWSER}          Chrome
+${BROWSER}          chrome
 ${DELAY}            0
 ${RESOURCE DIR}     Resources
 ${OUTPUT DIR}       /Report

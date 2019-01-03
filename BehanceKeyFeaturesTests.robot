@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     An example test file with Behance key features tests - Featured and Careers
+Documentation     An example test file with Behance key features tests - Featured, Careers, Search
 ...              
 ...
 Resource          Settings.robot
@@ -28,6 +28,10 @@ Discover Specific Project
 Browse Careers Page
     [Tags]  Careers
     Go To Careers Page
+    Search Keywords     Quality
+    Choose Random Job Offer
+    View Job Offer Details
+    #Apply For Job Offer
 
 Search Behance
     [Tags]  Search
