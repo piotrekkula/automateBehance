@@ -1,12 +1,11 @@
-====================================================
-Web testing Behance with Robot Framework and SeleniumLibrary
-====================================================
+Behance with Robot Framework and SeleniumLibrary
+================================================
 
 I have chosen `Robot Framework` for automation backed with python 3.
 Mainly because I am learning it now, and I thought I can connect that with the task You requested.
 
 Installation instructions
-========================
+=========================
 
 In order to run tests You need following pre-requisites:
 
@@ -17,11 +16,11 @@ In order to run tests You need following pre-requisites:
     - downloaded Chrome from here for your respective OS: 
         https://chromedriver.storage.googleapis.com/index.html?path=2.45/
     - added browser engine (in this example, Chrome) to system PATH so robot can find it 
-        (On Windows need to be added manually)
+        (On Windows needs to be added manually)
 - Run command line for robot and test suite
 
 Python and pip
--------------
+--------------
 
 In practice it is easiest to install Robot Framework and
 SeleniumLibrary along with its dependencies using `pip`_ package
@@ -96,7 +95,7 @@ The browser that is used is controlled by ``${BROWSER}`` variable defined in
 I simply do not have time to support 3 browsers for demo project. :)
 
 Related documents
-------------------------
+=================
 
 For Referrence:
 .. _Robot Framework: http://robotframework.org
