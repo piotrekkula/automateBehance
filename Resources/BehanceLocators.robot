@@ -17,10 +17,13 @@ ${ACCEPT COOKIES BUTTON}                //button[@id='_evidon-accept-button']
 ${PROJECT CONTENT PROFILE NAME}         //div[contains(@class,'profile-list-name')]
 ${PROJECT CONTENT PROJECT TITLE}        //div[contains(@class,'project-title')]
 ${PROJECT CONTENT COMMENTS SECTION}     //div[@id='project-block-footer-comments']
+${PROJECT CONTENT IMAGES}               //img[contains(@class,'js-project-module--picture')]
 ${PROJECT CLOSE BUTTON}                 //div[@class='js-close-dialog']/*[contains(@class,'rf-icon')]
 
 # Featured page locators
-${FEAT PROJECT COVERS}                  //a[contains(@class,'rf-project-cover__title')]
+${FEAT PROJECT COVERS}                  //img[contains(@class,'rf-project-cover__image')]
+${FEAT PROJECT TITLES}                  //a[contains(@class,'rf-project-cover__title')]
+${FEAT PROJECT FIELD}                   //a[contains(@class,'rf-project-cover__field')]
 
 # Careers page locators
 ${CAREERS KEYWORD INPUT FIELD}          //input[contains(@name,'search')]
